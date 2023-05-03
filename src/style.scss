@@ -1,1 +1,7 @@
+// ---------- Reset ----------
 @use "base/fonts";
+@use "base/reset_tags";
+// ---------- Components ----------
+@use "components/accordion";
+// ---------- Layout ----------
+@use "layout/card";
