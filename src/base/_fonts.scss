@@ -1,3 +1,4 @@
+@use "../abtract/variables" as colors;
 @font-face {
   font-family: KumbhSans_regular;
   src: url("../../dist/assets/fonts/KumbhSans-Regular.ttf");
@@ -13,26 +14,25 @@ body {
   font-size: 12px;
   hyphens: auto;
   font-smooth: always;
+  font-family: KumbhSans_regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-// h1 {
-// font-size: ;
-// font-family: ;
-// color: ;
-// }
-//
-// h2 {
-// }
-//
-// h2,
-// p {
-// font-family: ;
-// }
-//
-// p {
-// font-size: inherit;
-// text-decoration: none;
-// }
-//
+h1 {
+  font-family: KumbhSans_bold;
+  font-size: colors.$lg;
+  color: colors.$very-dark-desaturated-blue;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: colors.$rg;
+  color: colors.$very-dark-grayish-blue;
+}
+
+p {
+  font-size: colors.$sm;
+  color: colors.$dark-grayish-blue;
+  text-decoration: none;
+}
