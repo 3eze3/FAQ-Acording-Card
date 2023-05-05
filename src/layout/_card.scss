@@ -16,6 +16,12 @@ body {
   @include layout.flex($aling: flex-start, $gap: 0);
   background-color: colors_bg.$white;
   border-radius: 1.5rem;
+  @include layout.media-break(max-width, 480px) {
+    width: 23rem;
+    height: 100%;
+    margin-top: 1.5rem;
+    @include layout.flex($aling: flex-start, $direction: column, $gap: 6rem);
+  }
   &__images {
     flex: 50%;
     height: 100%;
@@ -25,18 +31,38 @@ body {
       url("../assets/images/bg-pattern-desktop.svg") 115% 70%;
     background-repeat: no-repeat;
     background-size: 32rem, 60rem;
+    @include layout.media-break(max-width, 480px) {
+      flex: 10%;
+    }
   }
   &__image {
     &--box {
       position: absolute;
       top: 12.5rem;
       right: 24.5rem;
+      @include layout.media-break(max-width, 480px) {
+        display: none;
+      }
+    }
+    &--ilustration {
+      display: none;
+      @include layout.media-break(max-width, 480px) {
+        display: block;
+        width: 15rem;
+        position: absolute;
+        top: -5rem;
+        left: 3.7rem;
+      }
     }
   }
   &__wrapper {
     flex: 50%;
     height: 100%;
     padding: 4rem 5rem 0 2rem;
+    @include layout.media-break(max-width, 480px) {
+      flex: 90%;
+      padding: 1rem;
+    }
   }
   &__title {
     margin-bottom: 2rem;
