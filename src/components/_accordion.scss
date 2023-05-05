@@ -1,18 +1,23 @@
 @use "../abtract/variables" as colors_bg;
 @use "../abtract/mixins" as layout;
 .accordion {
-  padding-right: 2rem;
+  padding-inline: 1rem;
   &__head {
     margin-bottom: 0.5rem;
-    //
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    //
+    @include layout.flex($justify: space-between, $gap: 0);
     cursor: pointer;
   }
   &__box {
-    margin-bottom: 1.25rem;
+    margin-bottom: 2.25rem;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: colors_bg.$light-grayish-blue;
+      width: 99.5%;
+      height: 1px;
+    }
   }
   &__question {
     pointer-events: none;
@@ -40,12 +45,5 @@
       padding-block: 0.25rem;
       transition: 0.25s ease;
     }
-  }
-
-  &__divider {
-    width: 105%;
-    height: 1px;
-    margin-bottom: 0.25rem;
-    background-color: colors_bg.$light-grayish-blue;
   }
 }
