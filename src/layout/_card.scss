@@ -1,2 +1,44 @@
+@use "../abtract/variables" as colors_bg;
+@use "../abtract/mixins" as layout;
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-image: linear-gradient(
+    colors_bg.$soft-violet,
+    colors_bg.$soft-blue
+  );
+}
 .card {
+  width: 63rem;
+  height: 33rem;
+  @include layout.flex($aling: flex-start, $gap: 0);
+  background-color: colors_bg.$white;
+  border-radius: 1.5rem;
+  &__images {
+    flex: 50%;
+    height: 100%;
+    position: relative;
+    background: url("../assets/images/illustration-woman-online-desktop.svg")
+        990% 40%,
+      url("../assets/images/bg-pattern-desktop.svg") 115% 70%;
+    background-repeat: no-repeat;
+    background-size: 32rem, 60rem;
+  }
+  &__image {
+    &--box {
+      position: absolute;
+      top: 12.5rem;
+      right: 24.5rem;
+    }
+  }
+  &__wrapper {
+    flex: 50%;
+    height: 100%;
+    padding: 4rem 5rem 0 2rem;
+  }
+  &__title {
+    margin-bottom: 2rem;
+  }
 }
