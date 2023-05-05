@@ -1,5 +1,7 @@
 # Frontend Mentor - FAQ accordion card
 
+## Deploy Site : [https://card-accordion-9604a.netlify.app/](https://card-accordion-9604a.netlify.app/)
+
 ![Design preview for the FAQ accordion card coding challenge](./dist/assets/images/desktop-preview.jpg)
 
 ## Welcome! 👋
