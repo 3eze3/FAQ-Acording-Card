@@ -1,6 +1,6 @@
 @font-face {
   font-family: KumbhSans_regular;
-  src: url("../../dist/assets/fonts/KumbhSans-Regular.ttf");
+  src: url("../assets/fonts/KumbhSans-Regular.ttf");
 }
 @font-face {
   font-family: KumbhSans_bold;
@@ -21,6 +21,7 @@ h1 {
   font-family: KumbhSans_bold;
   font-size: 2.5em;
   color: hsl(238deg, 29%, 16%);
+  padding-left: 1rem;
 }
 @media screen and (max-width: 480px) {
   h1 {
