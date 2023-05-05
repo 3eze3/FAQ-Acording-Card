@@ -5,11 +5,7 @@
   justify-content: $justify;
   gap: $gap;
 }
-@mixin bx-shadow($eje, $color, $intensity) {
-  $color_ligth: mix($color, #fff $intensity);
-  box-shadow: $eje $eje ($eje * 2) $color,
-    (-$eje) (-$eje) ($eje * 2) $color_ligth;
-}
+
 @mixin media-break($media, $break) {
   @media screen and ($media: $break) {
     @content;
