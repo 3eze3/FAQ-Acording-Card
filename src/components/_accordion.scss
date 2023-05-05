@@ -23,8 +23,10 @@
 
   &__arrow {
     pointer-events: none;
-    &__active {
+    transition: 0.3s ease;
+    &--active {
       transform: rotateX(160deg);
+      transition: 0.3s ease;
     }
   }
 
