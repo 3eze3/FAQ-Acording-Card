@@ -1,4 +1,5 @@
 @use "../abtract/variables" as colors;
+@use "../abtract/mixins" as layout;
 @font-face {
   font-family: KumbhSans_regular;
   src: url("../../dist/assets/fonts/KumbhSans-Regular.ttf");
@@ -23,12 +24,18 @@ h1 {
   font-family: KumbhSans_bold;
   font-size: colors.$lg;
   color: colors.$very-dark-desaturated-blue;
+  @include layout.media-break(max-width, 480px) {
+    text-align: center;
+  }
 }
 
 h2 {
   font-weight: 500;
   font-size: colors.$rg;
   color: colors.$very-dark-grayish-blue;
+  @include layout.media-break(max-width, 480px) {
+    font-size: 1.1em;
+  }
 }
 
 p {
